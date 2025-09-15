@@ -1,0 +1,592 @@
+/* =========================
+    RESET GLOBAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* desplazamiento suave */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Smythe", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  color: #3a393f;
+  text-align: center;
+  font-size: 3.5em;
+}
+
+h2 {
+  color: #3a393f;
+  text-align: center;
+  font-size: 3em;
+}
+
+h3 {
+  color: #3a393f;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+h4{
+  color: #e8f1e1;
+  text-align: center;
+  font-size: 1em;
+}
+
+h5 {
+  color: #e8f1e1;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/* =========================
+    VERSIÓN MÓVIL
+========================= */
+
+/*MENU*/
+.menu {
+  /* Propiedad de Grid para el layout principal */
+  grid-area: menu;
+  padding: 10px;
+  margin: 0;
+  background-color: #679499;
+  color: #e8f1e1;
+  /* Propiedades de Flexbox para alinear el contenido interno */
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+/* Izquierda */
+.menu__logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo */
+.menu__logo { 
+  height: 50px; /* Tamaño del logo */
+  margin-right: 5px;
+}
+
+/* Retro */
+.menu__title {
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
+
+/* Icono amburguesa */
+.menu__hamburger {
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 30px;
+}
+
+/* Derecha */
+.menu__list {
+  display: none;
+}
+
+/* MAIN */
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid anidado */
+  grid-template-areas: 
+  "intro"
+  "camaras"
+  "galeria";
+
+}
+
+/* SECCIONES ANIDADAS */
+.main__intro {
+  grid-area: intro;
+  padding: 10px;
+  margin: 0;
+  background-color: #84b4b8;
+
+  /* Flexbox para apilar el contenido y la animación del auto. */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos hijos horizontalmente. */
+  color: #e8f1e1;
+  overflow: hidden; /* Evita que el auto se desborde. */
+  position: relative; /* Ayuda a que el contenedor sea el punto de referencia */
+}
+
+.main__title {
+  /* pergamino de fondo*/
+  background-image: url("./imagenes/fondo-titulo.png"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  height: 100px; 
+  width: 200px;
+  display: flex; /* Usa flexbox para centrar el contenido (h1) */
+  justify-content: center; 
+  align-items: center; 
+}
+
+.main__contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fotografo */
+.main__fotografo-img {
+  width: 150px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Parrafos */
+.main__text-p{
+  padding: 0 10px;
+  margin: 15px 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: justify;
+}
+
+/* Auto */
+.main__image {
+  /* Se crea la "carretera" para el auto. */
+  position: relative; /* Este será el nuevo contenedor de referencia. */
+  width: 100%; 
+  height: 70px; /* Altura fija a la carretera. */
+  overflow: hidden; /* Recorta el auto si se sale de su carretera. */
+}
+
+/* Imágen auto */
+.main__auto {
+  width: 100px;
+  height: auto;
+  margin: 0;
+  position: absolute; /* Se posiciona el auto de forma absoluta respecto al contenedor */
+  bottom: 5px; /* Se ancla el auto a 5px del borde inferior de SU NUEVO contenedor. */
+
+  /* Animación */
+  animation-name: auto-animado;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+
+@keyframes auto-animado {
+  from { left: -100px; } /* Empieza fuera de la pantalla, a la izquierda (ancho del auto) */
+  to {
+    left: 100%; /* Termina justo cuando el auto sale completamente por la derecha */
+  }
+}
+
+
+/* CÁMARAS */
+.camaras {
+  /* Propiedad de Grid para el layout principal */
+  background-color: #e1dbcd;
+  padding: 10px;
+  margin: 0;
+}
+
+.camaras__h2 {
+  margin-bottom: 1em; 
+}
+
+.camaras__description {
+  /* Propiedades de Flexbox para alinear el contenido interno */
+  display: flex;
+  /* Para móvil, se quiere una columna */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em; /* Espacio entre las tarjetas de cámara */
+}
+
+/* Estilo base para CADA TARJETA de cámara. */
+.camaras__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.camaras__ul {
+  font-size: 1.3em;
+  color: #6d6c69;
+}
+
+.camaras__image {
+  width: 150px;
+  height: 150px;
+  object-position: center;
+  border-radius: 50%;
+  /* Transición suave */
+  transition: transform 0.3s ease-in-out;
+}
+
+.camaras__image:hover {
+  transform: scale(1.4); /* La imagen crece un 10% al pasar el mouse */
+  cursor: pointer; 
+}
+
+/* Título de las cámaras */
+.camaras__h3 {
+  font-weight: bold;
+  margin: 10px 5px 5px 5px;
+}
+
+/* Descripción de la cámara */
+.camaras__li {
+  list-style: none;
+  font-size: 0.8em;
+}
+
+/* GALERÍA */
+
+/* Galería fotográfica */
+.main__galeria {
+  background-color: #d68d6e;
+  padding: 10px;
+  margin: 0;
+  /* Usamos Flexbox para organizar el título y el contenedor de fotos */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor de fotos */
+.main__galeria__fotos {
+  /* Para móvil, las fotos se apilan en una columna */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em; /* Espacio entre las tarjetas */
+  padding: 20px;
+}
+
+/* cards */
+.main__galeria__card { 
+  position: relative; /* Para posicionar el overlay dentro */
+  width: 300px;
+  /* Una altura fija para que todas las tarjetas sean uniformes. */
+  height: 220px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+/* Fotografía */
+.main__galeria__img {
+  width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+  height: 100%; /* La imagen ocupa toda la altura de la tarjeta */
+  /* Soluciona el espacio blanco inferior tratando la imagen como un bloque. */
+  display: block;
+  object-fit: cover;
+  border-radius: 12px; 
+  /* Transición para los efectos */
+  transition: transform 0.5s ease,
+              box-shadow 0.5s ease,
+              border-radius 0.5s ease,
+              filter 0.8s ease;
+}
+
+/* Texto emergente */
+.overlay {
+  position: absolute;/* Posicionado sobre la img */
+  bottom: 0; /* Pegado abajo */
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0; /* Oculto al inicio */
+  transform: translateY(100%);    /* Empujado hacia abajo */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Se define el estado hover para la IMAGEN */
+.main__galeria__card:hover .main__galeria__img {
+  transform: scale(1.1); /* El zoom */
+  border-radius: 20px; /* Aumenta el redondeo */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* La sombra */
+  filter: sepia(80%); /* El toque retro con el filtro sepia */
+}
+
+/* Hover */
+.main__galeria__card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+    FOOTER
+========================= */
+
+.footer {
+  /* Propiedad de Grid para el layout principal */
+  grid-area: footer;
+  padding: 10px;
+  margin: 0;
+  background-color: #3A3A3A;
+
+  /* Propiedades de Flexbox para alinear el contenido interno */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ICONOS */
+.footer__iconos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__link {
+  display: flex;
+  color: #d68d6e;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem; 
+  /* Transición suave para el color y la transformación */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto Hover */
+.footer__link:hover {
+  color: #e8f1e1; /* Se cambiamos el color a uno más brillante */
+  transform: translateY(-5px); /* Se mueve el icono 5px hacia arriba */
+}
+
+/* Derechos Reservados */
+.footer__copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Se añade un espacio arriba */
+}
+
+/* Imágen de remolino */
+.footer__copyright-img {
+  width: 30px;
+  height: auto;
+  position: relative;
+  animation: rotar 3s infinite;
+}
+
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: rotate(90deg) scale(1.2);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.4);
+  }
+
+  75% {
+    transform: rotate(270deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* =========================
+    CONTENEDOR PRINCIPAL
+========================= */
+
+.contenedor-principal {
+  display: grid;
+  min-height: 100vh;
+  /* Se simplifica las filas: una para el menú y el resto para el contenido. */
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "menu"
+    "content";
+}
+
+.content-wrapper {
+  grid-area: content; /* Se asigna el área de contenido al wrapper. */
+}
+
+/* =========================
+    TABLET
+========================= */
+
+@media (min-width: 576px) {
+   /* MENÚ */
+  .menu__nav {
+    display: flex;
+    flex-grow: 1; /* Permite que el contenedor de navegación crezca */
+    justify-content: flex-end; /* Alinea la lista a la derecha */
+  }
+
+  /* Desaparace icono amburguesa */ 
+  .menu__hamburger {
+    display: none !important;
+  }
+
+  /* lista */
+  .menu__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .menu__item {
+    margin-right: 10px;
+  }
+
+  .menu__link {
+    color: #e8f1e1;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    /* Se agrega una transición para que el cambio de color sea suave */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* efecto */
+  .menu__link:hover {
+    background-color: #e8f1e1; 
+    color: #d68d6e; 
+  }
+
+   /* LAYOUT DEL FOOTER PARA TABLET */
+  .footer__contenedor {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    width: 100%; /* El contenedor ocupa todo el ancho */
+  }
+
+  .footer__grupo {
+    /* Para tablet, cada grupo ocupa ~40% para que quepan 2 en una fila */
+    flex-basis: 40%;
+    margin: 0 10px; /* Un poco de espacio */
+  }
+
+  .footer__copyright {
+    flex-basis: 100%; /* El copyright ocupa toda la fila de abajo */
+    margin: 0 20px; 
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  /* Remolino */
+  .footer__copyright-img {
+    margin-top: 10px;
+  }
+
+  /* LAYOUT DE CÁMARAS PARA TABLET */
+  .camaras__description {
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 1.5em; 
+    align-items: stretch; /* Se logra que todas las tarjetas tengan la misma altura */
+  }
+
+
+  /* LAYOUT DE GALERÍA PARA TABLET */
+  .main__galeria__fotos {
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 1.5em; 
+  }
+
+}
+
+/* =========================
+    DESKTOP
+========================= */
+@media (min-width: 992px) {
+  
+  .contenedor-principal {
+    grid-template-columns: 250px 1fr; /* Columna para el menú, el resto para el contenido */
+    grid-template-rows: 1fr; /* Una sola fila que ocupa toda la altura */
+    grid-template-areas: 
+      "menu content"; 
+    position: relative;
+  }
+
+  .content-wrapper {
+    /* Altura explícita igual a la del viewport. */
+    /* Esto, junto con overflow, obliga a que aparezca el scroll. */
+    height: 100vh;
+    overflow-y: auto; /* El scroll se aplica a todo este bloque */
+    background-color: whitesmoke;
+  }
+
+  
+  /* LAYOUT DEL MENU PARA DESKTOP */
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .menu__logo-container {
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  .menu__list{
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .menu__item {
+    margin-bottom: 15px;
+  }
+
+
+  /* LAYOUT DEL FOOTER PARA DESKTOP */
+  .footer__contenedor {
+    /* Se alinean todos los grupos en la parte superior para que empiecen a la misma altura */
+    align-items: flex-start;
+  }
+
+  .footer__grupo, .footer__copyright {
+    /* Para desktop, cada elemento ocupa ~30% para que quepan los 3 en una fila */
+    flex-basis: 30%;
+  }
+
+  .footer__copyright {
+    margin-top: 0; /* Se elimina el margen superior que lo empujaba hacia abajo */
+    align-items: center; /* Asegura que el contenido (texto y remolino) estén centrados */
+  }
+}

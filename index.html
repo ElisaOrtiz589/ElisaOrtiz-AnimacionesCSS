@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./Assets/imagenes/logo.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barriecito&family=Bungee+Spice&family=Courgette&family=Dancing+Script:wght@400..700&family=Ephesis&family=Gemunu+Libre:wght@200..800&family=Noto+Sans+Thai:wght@100..900&family=Pompiere&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Dirt&family=Share+Tech+Mono&family=Smythe&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./Assets/estilos.css">
+
+  <!-- Font Awesome  -->
+  <script src="https://kit.fontawesome.com/1482887256.js" crossorigin="anonymous" defer></script>
+
+  
+</head>
+
+<body>
+  <!-- VERSIÓN MÓVIL -->
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="contenedor-principal">
+
+    <!-- MENÚ -->
+    <header class="menu">
+
+      <!-- Izquierda -->
+      <div class="menu__logo-container">
+        <img class="menu__logo" src="./Assets/imagenes/logo.png" alt="Logo del sitio web">
+        <p class="menu__title">Retro</p>
+      </div>
+
+      <!-- Derecha -->
+      <div class="menu__nav">
+
+        <!-- icono amburguesa -->
+        <i class="fa-solid fa-bars menu__hamburger"></i>
+        
+        <!-- Lista -->
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#retro">Retro</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#camaras">Camaras</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#galeria">Galeria</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Contenedor para el contenido que tendrá scroll (main + footer) -->
+    <div class="content-wrapper">
+
+      <!-- MAIN -->
+      <main id="retro" class="main">
+
+        <!-- INTRODUCCIÓN -->
+        <div  class="main__intro">
+
+          <!-- Título -->
+          <div class="main__title">
+            <h1>RETRO</h1>
+          </div>
+
+          <div class="main__contenedor">
+            
+            <!-- Fotografo -->
+            <div class="main__fotografo">
+
+              <!-- Imágen Fotografo -->
+              <img class="main__fotografo-img" src="./Assets/imagenes/marcoOvalado.png" alt="Fotografo">
+            </div>
+
+            <!-- Párrafo -->
+            <div class="main__text">
+              <h2>Un viaje al Valparaíso del 1900 a través del lente de Harry Grant Olds</h2>
+              
+              <p class="main__text-p">
+              Bienvenidos a Retro, un espacio dedicado a la preservación y difusión del patrimonio fotográfico de Valparaíso a inicios del siglo XX. Este proyecto nace de la admiración por la rica historia de nuestra ciudad y la necesidad de mantener viva la memoria de lo que fuimos.
+              </p> 
+              
+              <p class="main__text-p">
+              A través del lente de pioneros como Harry Grant Olds, podemos viajar en el tiempo y ser testigos de la vida, la arquitectura y el pulso vibrante de Valparaíso en una de sus épocas doradas. Olds, un fotógrafo estadounidense que visitó Chile a fines del siglo XIX, nos dejó un legado incalculable: imágenes que son mucho más que simples fotografías; son verdaderos documentos gráficos, testimonios elocuentes de la cotidianidad porteña.
+              </p>
+              
+              <p class="main__text-p">
+              En esta página, nos sumergimos en la obra de Olds y otros fotógrafos de la época, explorando las herramientas que usaban, como las cámaras de placa de gran formato, y el arte detrás de cada captura. El objetivo es que, al recorrer esta galería, la historia de Valparaíso se sienta cercana y tangible, y que el legado de su patrimonio fotográfico inspire a nuevas generaciones.
+              </p>
+
+              <p class="main__text-p">
+              Te invito a explorar esta colección y a ser parte de la conservación de nuestra memoria histórica.
+              </p>
+              
+            </div>
+          </div>
+
+          <!-- AUTO-->
+          <div class="main__image">
+            <!-- Imágen auto -->
+            <img class="main__auto" src="./Assets/imagenes/auto-antiguo.png" alt="Auto antiguo">
+          </div>
+        </div>
+        
+        <!-- CÁMARAS FOTOGRÁFICAS -->
+        <div id="camaras" class="camaras">
+
+          <!-- Titulo Sección Cámaras -->
+          <div class="camaras__introduccion">
+
+            <h2 class="camaras__h2">
+              ALGUNAS CÁMARAS FOTOGRÁFICAS USADAS A INICIOS DEL 1900
+            </h2>
+            
+          </div>
+
+          <!-- Descripción de Cámaras -->
+          <div class="camaras__description">
+
+            <!-- Cámara 1 -->
+            <div class="camaras__card">
+
+              <!-- Imágen de la cámara -->
+              <img class="camaras__image" src="./Assets/imagenes/1camara.jpg" alt="Eastman Kodak View Camera">
+
+              <!-- Título de la Cámara -->
+              <h3 class="camaras__h3">Eastman Kodak View Camera (8x10 o 4x5)</h3>
+
+              <!-- Descripción de la cámara -->
+              <ul class="camaras__ul">
+                <li class="camaras__li">Fabricada en Rochester, EE.UU.</li>
+                <li class="camaras__li">De madera (caoba o nogal) con fuelle de cuero.</li>
+                <li class="camaras__li">Muy usada por fotógrafos de campo y de estudio.</li>
+                <li class="camaras__li">Compatible con placas secas en chasis intercambiables.</li>
+              </ul>
+            </div>
+
+            <!-- Cámara 2 -->
+            <div class="camaras__card">
+
+              <!-- Imágen de la cámara -->
+              <img class="camaras__image" src="./Assets/imagenes/2camara.jpg" alt="Rochester Optical Company – Premo View Camera">
+
+              <!-- Título de la Cámara -->
+              <h3 class="camaras__h3">Rochester Optical Company – Premo View Camera</h3>
+
+              <!-- Descripción de la cámara -->
+              <ul class="camaras__ul">
+                <li class="camaras__li">Popular en los 1890s.</li>
+                <li class="camaras__li">Disponible en varios formatos (incluyendo 4x5 y 8x10).</li>
+                <li class="camaras__li">Cámara plegable de madera con fuelle, portátil para la época.</li>
+                <li class="camaras__li">Rochester Optical luego fue absorbida por Kodak.</li>
+              </ul>
+            </div>
+            
+            <!-- Cámara 3 -->
+            <div class="camaras__card">
+
+              <!-- Imágen de la cámara -->
+              <img class="camaras__image" src="./Assets/imagenes/3camara.jpg" alt="Century View Camera (Century Camera Company, luego parte de Kodak)">
+
+              <!-- Título de la Cámara -->
+              <h3 class="camaras__h3">
+                Century View Camera 
+              </h3>
+
+              <!-- Descripción de la cámara -->
+              <ul class="camaras__ul">
+                <li class="camaras__li">Muy utilizada hacia 1898–1905.</li>
+                <li class="camaras__li">Se ofrecía en 8x10 y 4x5.</li>
+                <li class="camaras__li">Muy apreciada por fotógrafos de paisaje y arquitectura.</li>
+                <li class="camaras__li">Tenía movimientos de lente y respaldo</li>
+              </ul>
+            </div>
+
+            <!-- Cámara 4 -->
+            <div class="camaras__card">
+
+              <!-- Imágen de la cámara -->
+              <img class="camaras__image" src="./Assets/imagenes/4camara.jpg" alt="Scovill & Adams View Camera (Empire o Waterbury)">
+
+              <!-- Título de la Cámara -->
+              <h3 class="camaras__h3">Scovill & Adams View Camera (Empire o Waterbury)</h3>
+
+              <!-- Descripción de la cámara -->
+              <ul class="camaras__ul">
+                <li class="camaras__li">Marca estadounidense clásica de finales del siglo XIX.</li>
+                <li class="camaras__li">De madera (caoba o nogal).</li>
+                <li class="camaras__li">Poseían un fuelle rectangular extendido.</li>
+                <li class="camaras__li">Compatible con placas secas en chasis intercambiables.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- GALERÍA FOTOGRÁFICA -->
+        <div id="galeria" class="main__galeria">
+          <div class="main__galeria__title">
+            <h2>GALERÍA</h2>
+          </div>
+
+          <!-- Contenedor de fotos -->
+          <div class="main__galeria__fotos ">
+
+            <!-- Foto 1 -->
+            <div class="main__galeria__card">
+              <!-- Fotografía -->
+              <img class="main__galeria__img" src="./Assets/imagenes/foto1.JPG" alt="Imágen antiguo Teatro de la Victoria">
+              <!-- Texto emergente -->
+              <div class="overlay">Antiguo Teatro de la Victoria</div>
+            </div>
+
+            <!-- Foto 2 -->
+            <div class="main__galeria__card">
+              <!-- Fotografía -->
+              <img class="main__galeria__img" src="./Assets/imagenes/foto2.JPG" alt="Vista del Malecón junto a la avenida Errázuriz">
+              <!-- Texto emergente -->
+              <div class="overlay">Vista del Malecón junto a la avenida Errázuriz</div>
+            </div>
+
+            <!-- Foto 3 -->
+            <div class="main__galeria__card">
+              <!-- Fotografía -->
+              <img class="main__galeria__img" src="./Assets/imagenes/foto3.JPG" alt="Malecón de embarque">
+              <!-- Texto emergente -->
+              <div class="overlay">Malecón de embarque</div>
+            </div>
+
+            <!-- Foto 4 -->
+            <div class="main__galeria__card">
+              <!-- Fotografía -->
+              <img class="main__galeria__img" src="./Assets/imagenes/foto4.JPG" alt="Muelle Prat">
+              <!-- Texto emergente -->
+              <div class="overlay">Muelle Prat</div>
+            </div>
+
+            <!-- Foto 5 -->
+            <div class="main__galeria__card">
+              <!-- Fotografía -->
+              <img class="main__galeria__img" src="./Assets/imagenes/foto5.JPG" alt="Plaza Echaurren">
+              <!-- Texto emergente -->
+              <div class="overlay">Plaza Echaurren</div>
+            </div>
+
+            <!-- Foto 6 -->
+            <div class="main__galeria__card">
+              <!-- Fotografía -->
+              <img class="main__galeria__img" src="./Assets/imagenes/foto6.JPG" alt="Caleta el Membrillo">
+              <!-- Texto emergente -->
+              <div class="overlay">Caleta el Membrillo</div>
+            </div>
+
+            <!-- Foto 7 -->
+            <div class="main__galeria__card">
+              <!-- Fotografía -->
+              <img class="main__galeria__img" src="./Assets/imagenes/foto7.JPG" alt="Plaza de la Victoria">
+              <!-- Texto emergente -->
+              <div class="overlay">Plaza de la Victoria</div>
+            </div>
+
+            <!-- Foto 8 -->
+            <div class="main__galeria__card">
+              <!-- Fotografía -->
+              <img class="main__galeria__img" src="./Assets/imagenes/foto8.JPG" alt="Monumento a Las Glorias Navales">
+              <!-- Texto emergente -->
+              <div class="overlay">Monumento a Las Glorias Navales</div>
+            </div>
+          </div>
+        </div>
+      </main> 
+
+      <!-- FOOTER -->
+      <footer id="contacto" class="footer">
+
+        <div class="footer__contenedor">
+
+          <!-- REDES SOCIALES -->
+          <div class="footer__grupo">
+            
+            <div class="footer__titulo">
+              <h4>Sigueme en mis redes sociales:</h4>
+            </div>  
+
+            <!-- ICONOS -->
+            <div class="footer__iconos">
+              
+              <!-- LinkedIn -->
+              <a class="footer__link" href="https://www.linkedin.com/in/elisa-ortiz-cabrera-084338293/" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
+              <!-- X -->
+              <a class="footer__link" href="https://x.com/?lang=es" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de X">
+                <i class="fa-brands fa-square-x-twitter"></i>
+              </a>
+
+              <!-- Instagram -->
+              <a class="footer__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de Instagram">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+      
+              <!-- Facebook -->
+              <a class="footer__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de Facebook">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+            </div>
+          </div>   
+          
+          <!-- CONTACTO -->
+          <div class="footer__grupo">
+
+            <div class="footer__titulo">
+              <h4>Contáctame:</h4>
+            </div> 
+            
+            <!-- ICONOS -->
+            <div class="footer__iconos">
+              <!-- Whatsapp -->
+              <a class="footer__link" href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="Contactame por Whatsapp">
+                <i class="fa-brands fa-square-whatsapp"></i>
+              </a>
+
+              <!-- Correo -->
+              <a class="footer__link" href="mailto:elisa@cartero.com" target="_blank" rel="noopener noreferrer" aria-label="Envíame un correo electrónico">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Derechos Reservados -->
+          <div class="footer__copyright">
+            <h5>&copy; 2025 Elisa Ortiz. Todos los derechos reservados.</h5>
+            <!-- Imágen de remolino -->
+            <img class="footer__copyright-img" src="./Assets/imagenes/remolino.png" alt="imagen de remolino">
+          </div>
+        </div>
+      </footer>
+    </div> <!-- Cierre del content-wrapper -->
+  </div> <!-- Cierre del contenedor-principal -->
+</body>
+</html>
